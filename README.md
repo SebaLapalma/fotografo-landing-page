@@ -1,70 +1,260 @@
-# Getting Started with Create React App
+# 📸 Landing Page - Sebastian Lapalma Fotografía
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Landing page profesional y moderna para fotógrafo independiente, construida con React y Tailwind CSS.
 
-## Available Scripts
+![Portfolio Preview](https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=800&h=400&fit=crop)
 
-In the project directory, you can run:
+## ✨ Características
 
-### `npm start`
+- 🎨 **Diseño Moderno y Elegante** - Interfaz profesional con animaciones suaves
+- 📱 **Totalmente Responsive** - Adaptado para móviles, tablets y escritorio
+- 🖼️ **Galería Interactiva** - Modal con navegación de imágenes por categoría
+- 📧 **Formulario de Contacto** - Integrado con cliente de correo
+- 💬 **Botón WhatsApp Flotante** - Con animación de rebote para llamar la atención
+- 🌐 **Redes Sociales** - Enlaces a Instagram, Facebook, Twitter y LinkedIn
+- ⚡ **Rendimiento Optimizado** - Carga rápida y experiencia fluida
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🚀 Demo
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+[Ver Demo en Vivo](#) *(Agrega tu link de deploy aquí)*
 
-### `npm test`
+## 📋 Secciones
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Hero Section** - Presentación impactante con call-to-action
+2. **Galería de Trabajos** - 6 categorías principales con galerías expandibles
+3. **Servicios** - Descripción de servicios ofrecidos
+4. **Contacto** - Formulario para consultas
+5. **Footer** - Información y redes sociales
 
-### `npm run build`
+## 🛠️ Tecnologías Utilizadas
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **React 18** - Biblioteca de JavaScript para interfaces de usuario
+- **Tailwind CSS** - Framework CSS utility-first
+- **Lucide React** - Iconos modernos y ligeros
+- **Unsplash** - Imágenes de alta calidad (placeholder)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📦 Instalación
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Prerrequisitos
 
-### `npm run eject`
+- Node.js (v14 o superior)
+- npm o yarn
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pasos de instalación
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tuusuario/landing-fotografo.git
+cd landing-fotografo
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+2. Instala las dependencias:
+```bash
+npm install
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3. Instala Tailwind CSS y sus dependencias:
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
 
-## Learn More
+4. Configura Tailwind CSS en `tailwind.config.js`:
+```javascript
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+5. Crea o actualiza `src/index.css`:
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. Inicia el servidor de desarrollo:
+```bash
+npm start
+```
 
-### Code Splitting
+La aplicación estará disponible en `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ⚙️ Configuración
 
-### Analyzing the Bundle Size
+### Datos de Contacto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Edita las siguientes constantes en el componente principal:
 
-### Making a Progressive Web App
+```javascript
+// Número de WhatsApp (formato internacional)
+const whatsappNumber = "5493454019821";
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+// Email de contacto
+const contactEmail = "e.sebastian.lapalma@gmail.com";
+```
 
-### Advanced Configuration
+### Redes Sociales
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Actualiza los enlaces en el footer:
 
-### Deployment
+```javascript
+// Instagram
+href="https://instagram.com/tu_usuario"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+// Facebook
+href="https://facebook.com/tu_usuario"
 
-### `npm run build` fails to minify
+// Twitter/X
+href="https://twitter.com/tu_usuario"
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+// LinkedIn
+href="https://linkedin.com/in/tu_usuario"
+```
+
+### Galería de Imágenes
+
+Para personalizar las imágenes, edita el array `galleryItems` en el componente. Reemplaza las URLs de Unsplash con tus propias imágenes:
+
+```javascript
+const galleryItems = [
+  {
+    img: 'ruta/a/tu/imagen.jpg',
+    title: 'Categoría',
+    desc: 'Descripción',
+    fullGallery: [
+      'ruta/imagen1.jpg',
+      'ruta/imagen2.jpg',
+      // ... más imágenes
+    ]
+  },
+  // ... más categorías
+];
+```
+
+## 📂 Estructura del Proyecto
+
+```
+landing-fotografo/
+├── public/
+│   └── index.html
+├── src/
+│   ├── App.js              # Componente principal
+│   ├── index.js            # Punto de entrada
+│   └── index.css           # Estilos globales y Tailwind
+├── package.json
+├── tailwind.config.js      # Configuración de Tailwind
+└── README.md
+```
+
+## 🎨 Personalización de Colores
+
+Los colores principales pueden modificarse en las clases de Tailwind:
+
+- **Color primario**: `yellow-500` (dorado/amarillo)
+- **Backgrounds oscuros**: `gray-900`, `gray-700`
+- **WhatsApp**: `green-500`
+
+Para cambiar el esquema de colores, busca y reemplaza estas clases en el componente.
+
+## 📱 Funcionalidades Destacadas
+
+### Modal de Galería
+- Navegación con flechas laterales
+- Indicadores de posición
+- Cierre con botón X
+- Fondo oscuro semitransparente
+
+### Animaciones
+- Fade in al cargar el hero
+- Bounce en el botón de WhatsApp
+- Hover effects en imágenes y tarjetas
+- Transiciones suaves en toda la interfaz
+
+### Formulario de Contacto
+El formulario abre el cliente de correo predeterminado con los datos pre-cargados. Para integrar un backend o servicio de email, considera usar:
+- [EmailJS](https://www.emailjs.com/)
+- [Formspree](https://formspree.io/)
+- [SendGrid](https://sendgrid.com/)
+
+## 🚀 Despliegue
+
+### Vercel (Recomendado)
+
+1. Instala Vercel CLI:
+```bash
+npm install -g vercel
+```
+
+2. Despliega:
+```bash
+vercel
+```
+
+### Netlify
+
+1. Construye el proyecto:
+```bash
+npm run build
+```
+
+2. Arrastra la carpeta `build` a [Netlify Drop](https://app.netlify.com/drop)
+
+### GitHub Pages
+
+1. Instala gh-pages:
+```bash
+npm install --save-dev gh-pages
+```
+
+2. Agrega scripts en `package.json`:
+```json
+"homepage": "https://tuusuario.github.io/landing-fotografo",
+"predeploy": "npm run build",
+"deploy": "gh-pages -d build"
+```
+
+3. Despliega:
+```bash
+npm run deploy
+```
+
+## 🤝 Contribuciones
+
+Las contribuciones son bienvenidas. Para cambios importantes:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👤 Autor
+
+**Sebastian Lapalma**
+
+- WhatsApp: [+54 9 3454 019821](https://wa.me/5493454019821)
+- Email: e.sebastian.lapalma@gmail.com
+
+## 🙏 Agradecimientos
+
+- Imágenes de [Unsplash](https://unsplash.com)
+- Iconos de [Lucide](https://lucide.dev)
+- Framework CSS: [Tailwind CSS](https://tailwindcss.com)
+
+---
+
+⭐ Si este proyecto te fue útil, considera darle una estrella en GitHub!
+
+**Hecho con ❤️ y React**
